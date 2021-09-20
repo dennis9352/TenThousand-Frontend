@@ -7,12 +7,13 @@ const Image = (props) => {
         height,
         margin,
         padding,
-        background_color,
         border,
         border_radius,
         text_align,
         _onClick,
         cursor,
+        src,
+        children,
     } = props
 
     const styles = {
@@ -20,18 +21,18 @@ const Image = (props) => {
         height,
         margin,
         padding,
-        background_color,
         border,
         border_radius,
         text_align,
         _onClick,
+        src,
         cursor,
     }
 
     return (
         <React.Fragment>
             <DefaultImage onClick={_onClick} {...styles}>
-
+                {children}
             </DefaultImage>
         </React.Fragment>
     )
@@ -42,18 +43,24 @@ Image.defaultProps = {
     height: null,
     margin: "0px",
     padding: "0px",
-    bg: null,
     border_radius: "0px",
     border: false,
     text_align: false,
     is_flex: false,
     cursor: "default",
     display: null,
+    src: "",
     _onClick: () => {}
 }
 
-const DefaultImage = styled.image`
-
+const DefaultImage = styled.img`
+${(props) => props.display ? `display: ${props.display};`:''}
+${(props) => props.width ? `width: ${props.width};`:''}
+${(props) => props.height ? `height: ${props.height};`:''}
+${(props) => props.margin ? `margin: ${props.margin};`:''}
+${(props) => props.padding ? `padding: ${props.padding};`:''}
+${(props) => props.background ? `background: ${props.background};`:''}
+${(props) => props.src ? `src: ${props.src};`:''}
 `
 
 

@@ -7,12 +7,15 @@ const Text = (props) => {
         height,
         margin,
         padding,
-        background_color,
+        bold,
+        color,
+        size,
         border,
         border_radius,
         text_align,
         _onClick,
         cursor,
+        children,
     } = props
 
     const styles = {
@@ -20,10 +23,12 @@ const Text = (props) => {
         height,
         margin,
         padding,
-        background_color,
         border,
         border_radius,
         text_align,
+        bold,
+        color,
+        size,
         _onClick,
         cursor,
     }
@@ -31,7 +36,7 @@ const Text = (props) => {
     return (
         <React.Fragment>
             <DefaultText onClick={_onClick} {...styles}>
-
+                {children}
             </DefaultText>
         </React.Fragment>
     )
@@ -49,11 +54,21 @@ Text.defaultProps = {
     is_flex: false,
     cursor: "default",
     display: null,
-    _onClick: () => {}
+    bold: false,
+    color: "black",
+    size: "30px",
+    _onClick: () => {},
 }
 
 const DefaultText = styled.p`
-
+${(props) => props.display ? `display: ${props.display};`:''}
+${(props) => props.width ? `width: ${props.width};`:''}
+${(props) => props.height ? `height: ${props.height};`:''}
+${(props) => props.margin ? `margin: ${props.margin};`:''}
+${(props) => props.padding ? `padding: ${props.padding};`:''}
+${(props) => props.bold ? `font-weight: ${props.bold};`:''}
+${(props) => props.color ? `color: ${props.color};`:''}
+${(props) => props.size ? `font-size: ${props.size};`:''}
 `
 
 export default Text

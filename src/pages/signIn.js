@@ -1,15 +1,16 @@
 import React from "react"
-import signInBox from "../components/signIn/signInBox"
+import SignInBox from "../components/signIn/SignInBox"
 
-const signIn = () => {
-
+const SignIn = (props) => {
+    
     return (
         <>
-        
-        <signInBox> sdsd </signInBox>
+
+        <SignInBox></SignInBox>
 
         </>
     )
 }
 
-export default signIn
+export default SignIn
+

@@ -1,9 +1,9 @@
-import main from "./main"
-import signIn from "./signIn"
-import signUp from "./signUp"
+import Main from "./Main"
+import SignIn from "./SignIn"
+import SignUp from "./SignUp"
 
 export {
-    main,
-    signIn,
-    signUp,
+    Main,
+    SignIn,
+    SignUp,
 }

@@ -1,10 +1,12 @@
 import React from "react"
-
-const signUp = () => {
+import SignUpBox from "../components/signUp/SignUpBox"
+const SignUp = () => {
 
     return (
-        <></>
+        <>
+        <SignUpBox></SignUpBox>
+        </>
     )
 }
 
-export default signUp
+export default SignUp

@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { Input } from "../../elements";
 
 const SignInInput = (props) => {
@@ -8,7 +7,7 @@ const SignInInput = (props) => {
     return (
         <>
 
-        <Input width="100px" height="30px" margin="auto" />
+        <Input width="355px" height="40px" margin="0px 0px 10px 22px" font_size="17px" padding="0 0 0 10px" />
         
         </>
     )

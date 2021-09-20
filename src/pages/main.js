@@ -1,10 +1,10 @@
 import React from "react"
 
-const main = () => {
+const Main = () => {
 
     return (
         <></>
     )
 }
 
-export default main
+export default Main
