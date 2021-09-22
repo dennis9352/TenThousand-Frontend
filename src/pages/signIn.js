@@ -1,5 +1,5 @@
 import React from "react"
-import SignInBox from "../components/signIn/SignInBox"
+import SignInBox from "../components/SignIn/SignInBox.js"
 
 const SignIn = (props) => {
     

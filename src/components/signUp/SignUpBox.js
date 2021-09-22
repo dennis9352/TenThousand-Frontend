@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Grid, Text, Button, Input, Image } from "../../elements"
-import SignInInput from "../signIn/SignInInput";
+import SignInInput from "../SignIn/SignInInput";
 
 const SignUpBox = () => {
 
