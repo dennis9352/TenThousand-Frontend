@@ -69,6 +69,7 @@ ${(props) => props.padding ? `padding: ${props.padding};`:''}
 ${(props) => props.bold ? `font-weight: ${props.bold};`:''}
 ${(props) => props.color ? `color: ${props.color};`:''}
 ${(props) => props.size ? `font-size: ${props.size};`:''}
+${(props) => props.cursor ? `cursor: ${props.cursor};`:''}
 `
 
 export default Text

@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/SignInCSS.css"
+import "../../styles/Sign.css"
 
 const SignInInput = (props) => {
     

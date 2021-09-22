@@ -60,8 +60,11 @@ ${(props) => props.height ? `height: ${props.height};`:''}
 ${(props) => props.margin ? `margin: ${props.margin};`:''}
 ${(props) => props.padding ? `padding: ${props.padding};`:''}
 ${(props) => props.background ? `background: ${props.background};`:''}
-${(props) => props.src ? `src: ${props.src};`:''}
-`
+${(props) => props.border_radius ? `border-radius: ${props.border_radius};`:''}
+${(props) => props.border ? `border: ${props.border};`:''}
+${(props) => props.box_shadow ? `box-shadow: ${props.box_shadow};`:''}
+${(props) => props.align ? `align: ${props.align};`:''}
+`;
 
 
 export default Image

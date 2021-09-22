@@ -6,15 +6,15 @@ import logo2 from "../../Images/10K.mp4"
 import { history } from "../../data/configStore"
 
 const SignInBox = () => {
-    let [maintain, maintainAfter] = useState(false)
-    let [id, idAfter] = useState('')
-    let [password, passwordAfter] = useState('')
+    let [maintain, setMaintain] = useState(false)
+    let [id, setId] = useState('')
+    let [password, setPassword] = useState('')
 
     const maintainCheck = () => {
         if (maintain === false) {
-            maintainAfter(true)
+            setMaintain(true)
         }else{
-            maintainAfter(false)
+            setMaintain(false)
         }
     }
 
@@ -44,9 +44,9 @@ const SignInBox = () => {
 
             <Grid margin="50px 0px 0px 0px">
                 <Text bold size="13px" margin="0 0 0 35px" color="gray">USERNAME</Text>
-                    <SignInInput onChange={ (e) => { idAfter(e.target.value) } } />
+                    <SignInInput onChange={ (e) => { setId(e.target.value) } } />
                 <Text bold size="13px" margin="0 0 0 35px" color="gray">PASSWORD</Text>
-                    <SignInInput onChange={ (e) => { passwordAfter(e.target.value) } } />
+                    <SignInInput onChange={ (e) => { setPassword(e.target.value) } } />
             </Grid>
 
             <Grid width="368px" display="flex" justify_content="flex-end">
@@ -66,6 +66,7 @@ const SignInBox = () => {
             margin="10px 0px 0px 165px" 
             bold size="17px" 
             color="#7fd4ba"
+            cursor = "pointer"
             _onClick={() => {history.push("/signup")}}
             > 회원가입 
             </Text>
@@ -77,53 +78,3 @@ const SignInBox = () => {
 }
 
 export default SignInBox
-
-const InputBox = styled.input`
-display: block;
-appearance: none;
-outline: 0;
-border: 1px solid white;
-background-color: #f1f1f1;
-width: 300px;
-height: 25px;
-border-radius: 3px;
-padding: 10px 15px;
-margin: 0 auto 10px 35px;
-display: block;
-font-size: 18px;
-color: black;
-transition-duration: 0.4s;
-font-weight: 300;
-&:hover{
-  background-color: fade(white, 40%);
-}
-&:focus{
-  background-color: white;
-  border: 1px solid gray
-}
-`;
-
-const InputBox2 = styled.input`
-display: block;
-appearance: none;
-outline: 0;
-border: 1px solid white;
-background-color: #f1f1f1;
-width: 300px;
-height: 25px;
-border-radius: 3px;
-padding: 10px 15px;
-margin: 0 auto 10px 35px;
-display: block;
-font-size: 18px;
-color: black;
-transition-duration: 0.4s;
-font-weight: 300;
-&:hover{
-  background-color: fade(white, 40%);
-}
-&:focus{
-  background-color: white;
-  border: 1px solid gray
-}
-`;
