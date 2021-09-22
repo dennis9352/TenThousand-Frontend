@@ -16,6 +16,8 @@ const Input = (props) => {
         type,
         placeholder,
         font_size,
+        id,
+        display,
         children,
     } = props
 
@@ -32,6 +34,8 @@ const Input = (props) => {
         placeholder,
         type,
         font_size,
+        id,
+        display,
         cursor,
     }
 
@@ -71,6 +75,7 @@ ${(props) => props.background ? `background-color: ${props.background};`:''}
 ${(props) => props.type ? `type: ${props.type};`:''}
 ${(props) => props.placeholder ? `placeholder: ${props.placeholder};`:''}
 ${(props) => props.font_size ? `font-size: ${props.font_size};`:''}
+${(props) => props.id ? `id: ${props.id};`:''}
 `;
 
 
