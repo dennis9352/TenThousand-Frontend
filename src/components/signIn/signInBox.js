@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { Grid, Text, Button, Input } from "../../elements"
 import SignInInput from "./SignInInput";
 import logo2 from "../../Images/10K.mp4"
 import { history } from "../../data/configStore"
+import axios from "axios"
 
 const SignInBox = () => {
     let [maintain, setMaintain] = useState(false)
@@ -59,7 +59,12 @@ const SignInBox = () => {
                 </Grid>
             </Grid>
             
-            <Button width="328px" height="45px" margin="10px 0px 0px 36px">LOGIN</Button>
+            <Button width="328px" height="45px" margin="10px 0px 0px 36px"
+            onClick={() => {
+                axios.post('서버URL', {id, password})
+                .then()
+                .catch()
+            }}>LOGIN</Button>
 
             <Text margin="40px 0px 0px 123px" bold size="14px" color="gray"> 아직 회원이 아니신가요? </Text>
             <Text 
