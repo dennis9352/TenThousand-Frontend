@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Grid, Text, Button, Input, Image } from "../../elements"
-import logo from "../../Images/10K.png"
+import SignInInput from "../signIn/SignInInput";
 
 const SignUpBox = () => {
 
@@ -22,10 +22,14 @@ const SignUpBox = () => {
         <Input type="file"/>
 
             <Grid margin="50px 0px 0px 0px">
-                <Inputbox placeholder="아이디"></Inputbox>
-                <Inputbox placeholder="비밀번호"></Inputbox>
-                <Inputbox placeholder="비밀번호 확인"></Inputbox>
-                <Inputbox placeholder="닉네임"></Inputbox>
+                <Text bold size="13px" margin="0 0 0 35px" color="gray">아이디</Text>
+                <SignInInput placeholder={"6자 이상"} />
+                <Text bold size="13px" margin="0 0 0 35px" color="gray">비밀번호</Text>
+                <SignInInput placeholder={"6자 이상"} />
+                <Text bold size="13px" margin="0 0 0 35px" color="gray">비밀번호 확인</Text>
+                <SignInInput placeholder={"6자 이상"} />
+                <Text bold size="13px" margin="0 0 0 35px" color="gray">닉네임</Text>
+                <SignInInput placeholder={"2자 이상"} />
             </Grid>
             
             <Button width="355px" height="45px" margin="10px 0px 0px 25px">SIGN UP</Button>

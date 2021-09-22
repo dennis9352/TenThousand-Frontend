@@ -1,0 +1,30 @@
+.inputBox{
+    display: block;
+    appearance: none;
+    outline: 0;
+    border: 1px solid white;
+    background-color: #f1f1f1;
+    width: 300px;
+    height: 25px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 0 auto 10px 35px;
+    display: block;
+    font-size: 16px;
+    color: black;
+    transition-duration: 0.4s;
+    font-weight: 300;
+}
+
+.inputBox:hover {
+    background-color: fade(white, 40%);
+}
+
+.inputBox:focus {
+    background-color: white;
+    border: 1px solid gray
+}
+
+.inputBox::placeholder {
+    font-size: 14px;
+}

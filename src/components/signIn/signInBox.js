@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Grid, Text, Button, Input } from "../../elements"
 import SignInInput from "./SignInInput";
@@ -6,6 +6,17 @@ import logo2 from "../../Images/10K.mp4"
 import { history } from "../../data/configStore"
 
 const SignInBox = () => {
+    let [maintain, maintainAfter] = useState(false)
+    let [id, idAfter] = useState('')
+    let [password, passwordAfter] = useState('')
+
+    const maintainCheck = () => {
+        if (maintain === false) {
+            maintainAfter(true)
+        }else{
+            maintainAfter(false)
+        }
+    }
 
     return (
         <>
@@ -30,11 +41,12 @@ const SignInBox = () => {
         >
             <source src={logo2} type="video/mp4" />
         </video>
+
             <Grid margin="50px 0px 0px 0px">
                 <Text bold size="13px" margin="0 0 0 35px" color="gray">USERNAME</Text>
-                    <InputBox/>
+                    <SignInInput onChange={ (e) => { idAfter(e.target.value) } } />
                 <Text bold size="13px" margin="0 0 0 35px" color="gray">PASSWORD</Text>
-                    <InputBox2/>
+                    <SignInInput onChange={ (e) => { passwordAfter(e.target.value) } } />
             </Grid>
 
             <Grid width="368px" display="flex" justify_content="flex-end">
@@ -43,7 +55,7 @@ const SignInBox = () => {
                 </Grid>
 
                 <Grid width="30px">
-                    <Input height="20px" type="checkbox" />
+                    <Input height="20px" type="checkbox" _onClick={ () => { maintainCheck() } }/>
                 </Grid>
             </Grid>
             
@@ -57,7 +69,7 @@ const SignInBox = () => {
             _onClick={() => {history.push("/signup")}}
             > 회원가입 
             </Text>
-           
+
         </Grid>
         
         </>
